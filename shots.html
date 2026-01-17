@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whatataps</title>
+
+<style>
+:root{
+  --red:#c40000;
+  --white:#ffffff;
+  --light-grey:#f2f2f2;
+  --mid-grey:#b5b5b5;
+  --dark-grey:#333333;
+  --intro-dark:#1f1f1f;
+}
+
+*{
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--white);
+  color:var(--dark-grey);
+}
+
+header{
+  background:linear-gradient(135deg, var(--red), #9f0000);
+  color:white;
+  padding:70px 20px;
+  text-align:center;
+}
+
+header h1{
+  font-size:3rem;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+
+header p{
+  max-width:700px;
+  margin:auto;
+  font-size:1.1rem;
+  line-height:1.6;
+  color:#f5f5f5;
+}
+
+.intro{
+  padding:70px 20px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  background:var(--intro-dark);
+  border-radius:18px;
+  margin-top:-40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.intro h2{
+  color:var(--red);
+  font-size:2.2rem;
+  margin-bottom:20px;
+}
+
+.intro p{
+  font-size:1.1rem;
+  line-height:1.8;
+  color:#e0e0e0;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+  padding:60px 30px 80px;
+  max-width:1300px;
+  margin:auto;
+}
+
+.gallery img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.35s ease;
+  border:4px solid var(--light-grey);
+  background:var(--light-grey);
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+  border-color:var(--red);
+  box-shadow:0 14px 35px rgba(196,0,0,0.25);
+}
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(30,30,30,0.95);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+  border:6px solid var(--white);
+}
+
+.lightbox span{
+  position:absolute;
+  top:25px;
+  right:35px;
+  font-size:3rem;
+  color:white;
+  cursor:pointer;
+}
+
+footer{
+  background:var(--dark-grey);
+  color:#eaeaea;
+  text-align:center;
+  padding:20px;
+  letter-spacing:1px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>OhMyOldieNikonD3100</h1>
+  <p>
+    A compilation of the .  
+    Every frame is a question. Every shot is a pause in time.
+  </p>
+</header>
+
+<section class="intro">
+  <h2>Before You Scroll</h2>
+  <p>
+    I didn’t chase perfection — I chased feeling.  
+    These photographs are not answers but invitations:  
+    to look closer, to slow down, to notice what almost passed unseen.  
+    What you see here is how the world spoke back when I raised my camera.
+  </p>
+</section>
+
+<section class="gallery">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\558972075_1212959607519756_1814690395978400270_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\590778525_1255168996632150_5583559233487705252_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\591129823_1255168999965483_1289304275658165162_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\DSC_0039.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\DSC_0104.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\DSC_0278.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\DSC_0401.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\DSC_0272.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\557823312_1209154741233576_5084228914439606552_n.jpg" onclick="openLightbox(this)"> 
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\DSC_0005.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\CSC_0377.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\591129823_1255168999965483_1289304275658165162_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\565702548_1219936560155394_1223880294375447256_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\558900737_1205673624915021_8959017096693224863_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\556242560_1205672761581774_3157545883601136607_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\552637953_1198414455640938_7086111491529166680_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\558160542_1212907014191682_421028559298984508_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\557587697_1208923941256656_6384050788303363366_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\591501250_1255168939965489_3797048824790679964_n.jpg" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\DSC_0125.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\DSC_0135.JPG" onclick="openLightbox(this)">
+  <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\548477423_1194293179386399_1755632722423641695_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\548268888_1192546316227752_2514771611163981759_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\546614566_1192705436211840_8207278813419462858_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\548688507_1192591326223251_3777665192670809064_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\549926805_1192705326211851_2227835666186196671_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\549414288_1194293646053019_2966732941065753697_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\531806727_1164494825699568_726984172464206522_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\532021508_1164494339032950_8179909354471810787_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\532207693_1164494722366245_5034156193037780446_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\542980995_1183671027115281_1639916636196670707_n.jpg" onclick="openLightbox(this)">
+ <img src="c:\Users\mdion\OneDrive\Desktop\New folder (2)\548309487_1192591356223248_2714507642461645676_n.jpg" onclick="openLightbox(this)">
+</section>
+
+<div class="lightbox" id="lightbox">
+  <span onclick="closeLightbox()">&times;</span>
+  <img id="lightboxImg">
+</div>
+
+<footer>
+  © Your Name • Camera Shots Compilation
+</footer>
+
+<script>
+function openLightbox(img){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightboxImg").src=img.src;
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>
